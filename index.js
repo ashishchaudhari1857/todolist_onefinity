@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors())
  
 app.use('/api/task' ,TaskRoutes)
-mongoose.connect(process.env.URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
     
