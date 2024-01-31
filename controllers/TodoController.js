@@ -1,9 +1,10 @@
  const Task = require('../model/TodoModel');
     const addTask=async(req,res)=>{
-        const {task }=req.body;
+        const {task ,endDate }=req.body;
            try {
             const addedTask = await Task.create({
                 task: task,
+                endDate:endDate
               });
                    return res.status(200).json({addedTask})
            } catch (error) {
@@ -72,6 +73,7 @@
               return res.status(500).send(`Error fetching tasks: ${error}`);
             }
           }
+
 
     module.exports={
         addTask,

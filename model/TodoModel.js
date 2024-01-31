@@ -9,6 +9,10 @@ const taskSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
+  endDate:{
+    type:String,
+
+  }
   
 });
 
